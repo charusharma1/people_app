@@ -1,0 +1,27 @@
+<div ng-app="app">
+  <div ng-controller="exampleCtrl">
+    <div>
+      <div ng-repeat="person in people track by $index"> 
+       <p ng-click="completePerson($index)" ng-if="ifPositive(person)">Name: {{person.name}} </p>
+       <p>Bio: {{person.bio}} </p>
+      </div>
+    </div>
+    <P>Number of people in the database: {{numPeople}}</P>
+    <div>Add Person:
+      <div>
+        Name: <input ng-model="person.name"> 
+      </div>
+      <div>
+        Bio: <input ng-model="person.bio"> 
+      </div>
+      <div>
+        BioVisible: <input ng-model="person.bioVisible"> 
+      </div>
+    </div>
+    <button ng-click="addPerson(person)">Add Person</button>
+
+
+
+
+  </div>
+</div>
